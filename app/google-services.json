@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "551199940922",
+    "firebase_url": "https://beer-manaus.firebaseio.com",
+    "project_id": "beer-manaus",
+    "storage_bucket": "beer-manaus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551199940922:android:a867c304e000720e",
+        "android_client_info": {
+          "package_name": "barros.jeferson.beermanaus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "551199940922-kc6u471thg88al3c35ub786f0iu2acgt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNjvMWPmMRUZkpYXl1L5cS0jyk8VdrkbM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
