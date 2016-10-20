@@ -23,14 +23,14 @@
         <ImageView
             android:id="@+id/fotoBarDivulgacaoImage"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:background="@android:color/black"/>
+            android:layout_height="110dp"
+            android:background="@mipmap/ic_launcher"/>
 
         <TextView
             android:id="@+id/nomeBarText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Top 10 Australian Beaches"
+            android:text="Aerobis Bar e Restaurante"
             android:textSize="16sp"
             android:textColor="@android:color/white"
             android:textAlignment="center"
@@ -41,9 +41,9 @@
             android:id="@+id/horarioText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Horário de Funcionamento"
-            android:padding="8dp"
-            android:layout_alignParentBottom="true"/>
+            android:text="Horário de funcionamento: \n8h as 19h (domingo, segunda e terça-feira); à partir de 7h15 (quarta, quinta, sexta e sábado)"
+            android:layout_margin="8dp"
+            android:layout_below="@id/fotoBarDivulgacaoImage"/>
 
         </RelativeLayout>
 
