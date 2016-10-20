@@ -23,7 +23,7 @@
         <ImageView
             android:id="@+id/fotoBarDivulgacaoImage"
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="160dp"
             android:background="@android:color/black"/>
 
         <TextView
@@ -33,13 +33,17 @@
             android:text="Top 10 Australian Beaches"
             android:textSize="16sp"
             android:textColor="@android:color/white"
-            android:layout_marginTop="100dp"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:layout_alignBottom="@+id/fotoBarDivulgacaoImage"
+            android:padding="10dp"/>
 
         <TextView
             android:id="@+id/horarioText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="Horário de Funcionamento"
+            android:padding="8dp"
+            android:layout_alignParentBottom="true"/>
 
         </RelativeLayout>
 
