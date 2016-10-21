@@ -1,6 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <!-- A CardView that contains a TextView -->
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/fotoDetails"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/nomeDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aerobis Bar e Restaurante"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:layout_alignBottom="@+id/fotoDetails"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:background="#50000000"/>
+
+            <TextView
+                android:id="@+id/horarioTitleDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Horário de funcionamento: "
+                android:layout_below="@id/fotoDetails"/>
+
+            <TextView
+                android:id="@+id/horarioDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Horário de funcionamento: \n8h as 19h (domingo, segunda e terça-feira); à partir de 7h15 (quarta, quinta, sexta e sábado)"
+                android:layout_margin="8dp"
+                android:layout_below="@id/horarioTitleDetails"/>
+
+            <TextView
+                android:id="@+id/atrativosTitleDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Atrativos: "
+                android:layout_below="@id/horarioDetails"/>
+
+            <TextView
+                android:id="@+id/atrativosDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Horário de funcionamento: \n8h as 19h (domingo, segunda e terça-feira); à partir de 7h15 (quarta, quinta, sexta e sábado)"
+                android:layout_margin="8dp"
+                android:layout_below="@id/atrativosTitleDetails"/>
+
+            <TextView
+                android:id="@+id/enderecoTitleDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Endereço: "
+                android:layout_below="@id/atrativosDetails"/>
+
+            <TextView
+                android:id="@+id/enderecoDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rua abc"
+                android:layout_margin="8dp"
+                android:layout_below="@id/enderecoTitleDetails"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

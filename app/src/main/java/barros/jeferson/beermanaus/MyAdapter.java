@@ -3,6 +3,7 @@ package barros.jeferson.beermanaus;
 import android.content.Context;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,9 +24,19 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private final Context mContext;
     private ArrayList<Bar> mlista;
 
-    public MyAdapter(Context mContext, ArrayList<Bar> mlista) {
-        this.mContext = mContext;
-        this.mlista = mlista;
+    private AdapterListener mAdapterListener;
+
+    public MyAdapter(Context context, ArrayList<Bar> lista){
+        this.mlista = lista;
+        this.mContext = context;
+    }
+
+    public AdapterListener getmAdapterListener() {
+        return mAdapterListener;
+    }
+
+    public void setmAdapterListener(AdapterListener mAdapterListener) {
+        this.mAdapterListener = mAdapterListener;
     }
 
     //#2 Monta o layout da lista
@@ -51,12 +62,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     //#4 conta a quantidade de elementos existente na lista
     @Override
     public int getItemCount() {
+        //tamanho da lista
         return mlista.size();
     }
 
     //#1 método a ser implementado
     //mapeia os elementos de layout
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private TextView nomeView;
         private TextView horarioFuncionamentoView;
@@ -97,7 +109,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             return this;
         }
 
+        @Override
+        public void onClick(View view) {
+            int position = getPosition();
+
+            if (mAdapterListener != null) {
+                mAdapterListener.onItemClick(view, position);
+            }
+        }
     }
 
-
+    public interface AdapterListener {
+        public void onItemClick (View view, int position);
+    }
 }

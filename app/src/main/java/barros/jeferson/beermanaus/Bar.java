@@ -1,10 +1,12 @@
 package barros.jeferson.beermanaus;
 
+import java.io.Serializable;
+
 /**
- * Created by jbalves on 10/20/16.
+ * Created by Jeferson Barros on 10/20/16.
  */
 
-public class Bar {
+public class Bar implements Serializable{
     private String nome;
     private String endereco;
     private String horarioFuncionamento;
@@ -12,13 +14,6 @@ public class Bar {
 
     public Bar() {
 
-    }
-
-    public Bar(String nome, String endereco, String horarioFuncionamento, String fotoDivulgacao) {
-        this.nome = nome;
-        this.endereco = endereco;
-        this.horarioFuncionamento = horarioFuncionamento;
-        this.fotoDivulgacao = fotoDivulgacao;
     }
 
     public String getNome() {
