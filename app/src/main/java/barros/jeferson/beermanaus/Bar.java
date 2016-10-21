@@ -10,6 +10,10 @@ public class Bar {
     private String horarioFuncionamento;
     private String fotoDivulgacao;
 
+    public Bar() {
+
+    }
+
     public Bar(String nome, String endereco, String horarioFuncionamento, String fotoDivulgacao) {
         this.nome = nome;
         this.endereco = endereco;

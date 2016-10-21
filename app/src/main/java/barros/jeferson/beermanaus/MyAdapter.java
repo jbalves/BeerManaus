@@ -91,7 +91,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                     .glide(mContext)
                     .load(foto)
                     .build(GlideRequest.BITMAP)
-                    .resize(200,200)
+                    //.resize(200,200)
                     .into(fotoBarView);
 
             return this;
