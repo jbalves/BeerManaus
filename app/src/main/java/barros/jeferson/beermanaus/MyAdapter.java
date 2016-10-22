@@ -1,7 +1,6 @@
 package barros.jeferson.beermanaus;
 
 import android.content.Context;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,14 +20,14 @@ import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
-    private final Context mContext;
-    private ArrayList<Bar> mlista;
+    private final Context context;
+    private ArrayList<Bar> lista;
 
     private AdapterListener mAdapterListener;
 
-    public MyAdapter(Context context, ArrayList<Bar> lista){
-        this.mlista = lista;
-        this.mContext = context;
+    public MyAdapter (Context context, ArrayList<Bar> lista) {
+        this.lista = lista;
+        this.context = context;
     }
 
     public AdapterListener getmAdapterListener() {
@@ -50,7 +49,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         //Recupera a referência do Bar
-        Bar bar = mlista.get(position);
+        Bar bar = lista.get(position);
 
         //Seta os valores do livro para o layout dentro do holder
         holder
@@ -63,7 +62,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public int getItemCount() {
         //tamanho da lista
-        return mlista.size();
+        return lista.size();
     }
 
     //#1 método a ser implementado
@@ -77,10 +76,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         public ViewHolder(View itemView) {
             super(itemView);
 
+
             //Recuperando as referências do layout
             nomeView = (TextView) itemView.findViewById(R.id.nomeBarText);
             horarioFuncionamentoView = (TextView) itemView.findViewById(R.id.horarioText);
             fotoBarView = (ImageView) itemView.findViewById(R.id.fotoBarDivulgacaoImage);
+
+            //Simula o click
+            itemView.setOnClickListener(this);
 
         }
 
@@ -100,7 +103,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             if (fotoBarView == null) return this;
 
             Ocean
-                    .glide(mContext)
+                    .glide(context)
                     .load(foto)
                     .build(GlideRequest.BITMAP)
                     //.resize(200,200)

@@ -6,9 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
-import android.view.Window;
 
 
 import com.oceanbrasil.libocean.Ocean;
@@ -86,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements Request.RequestLi
         //Recupera a instância do bar selecionado
         Bar bar = mlista.get(position);
         //Intent para abrir a tela de detalhes
-        Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
+        Intent intent = new Intent(MainActivity.this,DetalhesActivity.class);
         /**
          * Passa o objeto bar inteiro via Extra transformando a classe bar em um Serializable
          * Obs: Voce precisa implementar a interface Serializable em Bar

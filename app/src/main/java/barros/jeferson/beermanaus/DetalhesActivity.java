@@ -2,7 +2,6 @@ package barros.jeferson.beermanaus;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,7 +12,7 @@ import com.oceanbrasil.libocean.control.glide.GlideRequest;
  * Created by Jeferson Barros on 21/10/2016.
  */
 
-public class DetailsActivity extends AppCompatActivity {
+public class DetalhesActivity extends AppCompatActivity {
 
     private TextView mNomeTextView;
     private TextView mHorarioTextView;
@@ -24,12 +23,14 @@ public class DetailsActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.datails_activity);
+        setContentView(R.layout.detalhes_activity);
 
         //Informacoes do bar passado via Extra
         Bar bar = recuperarBar();
+
         //Recuperando views do layout para acessar o layout
         recuperarViews();
+
         //Setando os valores do bar para o layout
         setBar(bar);
     }
